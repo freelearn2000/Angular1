@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  weather = 'Todays temperature is 32C';
+  model = 'Todays temperature is 32C';
+
+  changeModel(event:any)
+  {
+    this.model=event?.target.value;
+  }
 }

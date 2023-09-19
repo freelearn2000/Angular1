@@ -1,4 +1,21 @@
 <div class="ui very padded centre aligned container segment">
   <h2>Weather Information</h2>
-  <h4>{{weather}}</h4>
+
+  <!--Interpolation-->
+  <h4>{{model}}</h4>
+
+
+  <!--Property Binding-->
+<div class="ui input">
+<input type="text" placeholder="Model" [value]="model" />
+</div>
+  <!--Event Binding-->
+  <div class="ui input">
+    <input type="text" placeholder="Model" (keyup)="changeModel($event)" />
+    </div>
+
+      <!--TwoWay Binding-->
+  <div class="ui input">
+    <input type="text" placeholder="Model" [(ngModel)]="model" />
+    </div>
 </div>
